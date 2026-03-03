@@ -1,8 +1,0 @@
-spring:
-  application:
-    name: simply-talk
-  datasource:
-    url: jdbc:postgresql://localhost:5433/simplytalk
-    username: simply_user
-    password: simply_user
-    driver-class-name: org.postgresql.Driver
