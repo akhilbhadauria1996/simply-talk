@@ -29,7 +29,6 @@ public class UserServiceImpl implements UserService {
             throw new RuntimeException("email already exists");
         }
         User user = User.builder()
-                .id(UUID.randomUUID())
                 .userName(request.getUserName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))

@@ -2,8 +2,8 @@ package com.akhil.simply_talk.controller;
 
 import com.akhil.simply_talk.dto.RegisterUserRequest;
 import com.akhil.simply_talk.dto.RegisterUserResponse;
-import com.akhil.simply_talk.entity.User;
 import com.akhil.simply_talk.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ public class AuthController {
     private final UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<RegisterUserResponse> registerUser(@RequestBody RegisterUserRequest request){
+    public ResponseEntity<RegisterUserResponse> registerUser(@Valid @RequestBody RegisterUserRequest request){
         RegisterUserResponse response = userService.registerUser(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
