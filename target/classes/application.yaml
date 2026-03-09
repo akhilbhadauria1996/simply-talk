@@ -6,3 +6,19 @@ spring:
     username: simply_user
     password: simply_user
     driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: simplytalksupersecretkeysimplytalksupersecretkey
+  expiration: 3600000
+
+
+server:
+  port: 8080
