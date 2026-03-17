@@ -2,7 +2,7 @@ spring:
   application:
     name: simply-talk
   datasource:
-    url: jdbc:postgresql://localhost:5433/simplytalk
+    url: jdbc:postgresql://localhost:5432/simplytalk
     username: simply_user
     password: simply_user
     driver-class-name: org.postgresql.Driver
